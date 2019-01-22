@@ -14,6 +14,12 @@ body {
     text-decoration: none;
 }
 
+/*1) При наведении на меню сайта цвет ссылок должен меняться на произвольный.*/
+.main-menu li a:hover {
+    color: #e4310d;
+    font-weight: bold;
+}
+
 .product-header {
     color: #000;
     font-size: 18px;
@@ -55,10 +61,9 @@ body {
     font-style: italic;
 }
 
-.product-functionality li {
-    list-style: none;
-    background: url(../images/CLICK.BMP) no-repeat left center;
-    padding-left: 20px;
+/*рамка ячеек*/
+.product-functionality td {
+    border: 1px solid black;
 }
 
 /*
@@ -75,6 +80,15 @@ body {
     width: 400px;
     color: mediumblue;
     height: 20px;
+    /*5) При вводе текста в текстовые поля каждое слово должно начинаться с заглавной буквы,
+    даже если пользователь будет вводить со строчной.*/
+    text-transform: capitalize;
+}
+
+/*4) При вводе текста в поле «Email» на странице контактной информации поменять цвет текста и цвет поля.*/
+.contacts-form input[type="email"]:focus {
+    background: mediumblue;
+    color: #fff;
 }
 
 .contacts-form textarea[name="note"] {
@@ -89,4 +103,15 @@ body {
     width: 180px;
     border: 1px solid #274e7d;
     padding: 10px;
+}
+
+/*7) *При наведении курсора на изображения в разделе просмотра товара и подробного описания необходимо сделать так,
+чтобы рамка исчезала, но сама картинка при этом не смещалась. */
+.product-img:hover {
+    border-color: transparent;
+}
+
+.footer {
+    text-align: center;
+    font-weight: bold;
 }
